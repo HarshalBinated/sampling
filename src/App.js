@@ -8,13 +8,18 @@ import Analytics from './pages/Analytics.jsx';
 import Comment from './pages/Comment.jsx';
 import Product from './pages/Product.jsx';
 import ProductList from './pages/ProductList.jsx';
+import Auth from './pages/Register';
+import Register from './pages/Register';
+import Signin from './pages/Signin';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Sidebar>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+      
+          <Route path="/" element={<Register />} />
+          <Route path="/signin" element={<Signin />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/comment" element={<Comment />} />

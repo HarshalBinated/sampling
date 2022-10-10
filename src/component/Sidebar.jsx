@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import logo from '../images/logo.png';
+
 import {
     FaTh,
     FaBars,
-    FaUserAlt,
     FaRegChartBar,
-    FaCommentAlt,
+    FaRegFileWord,
+    FaCreativeCommonsSamplingPlus,
     FaShoppingBag,
     FaThList
 }from "react-icons/fa";
+import {AiFillEye, AiFillHome}from "react-icons/ai";
 import { NavLink } from 'react-router-dom';
 
 
@@ -18,40 +21,35 @@ const Sidebar = ({children}) => {
         {
             path:"/dashboard",
             name:"Dashboard",
-            icon:<FaTh/>
+            icon:<AiFillHome/>
         },
         {
-            path:"/about",
-            name:"About",
-            icon:<FaUserAlt/>
-        },
-        {
-            path:"/analytics",
-            name:"Analytics",
+            path:"/stock",
+            name:"Stock",
             icon:<FaRegChartBar/>
         },
         {
-            path:"/comment",
-            name:"Comment",
-            icon:<FaCommentAlt/>
+            path:"/utilization",
+            name:"Utilization",
+            icon:<FaCreativeCommonsSamplingPlus/>
         },
         {
-            path:"/product",
-            name:"Product",
-            icon:<FaShoppingBag/>
+            path:"/estimation",
+            name:"Estimation",
+            icon:<FaRegFileWord/>
         },
         {
-            path:"/productList",
-            name:"Product",
-            icon:<FaThList/>
+            path:"/view",
+            name:"View",
+            icon:<AiFillEye/>
         }
     ]
     return (
         <div className="container">
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
-                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo "></h1>
+                   <div style={{marginLeft: isOpen ? "140px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>

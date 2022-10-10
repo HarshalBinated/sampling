@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Comment = () => {
+const Estimation = () => {
     return (
         <div>
             <h1>Comment page</h1>
@@ -8,5 +8,5 @@ const Comment = () => {
     );
 };
 
-export default Comment;
+export default Estimation;
 

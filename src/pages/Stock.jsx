@@ -3,7 +3,7 @@ import React from 'react';
 const Stock = () => {
     return (
         <div>
-            <h1>About paddge</h1>
+            <h1>Stock</h1>
         </div>
     );
 };

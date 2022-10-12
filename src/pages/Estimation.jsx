@@ -3,7 +3,7 @@ import React from 'react';
 const Estimation = () => {
     return (
         <div>
-            <h1>Comment page</h1>
+            <h1>Estimation</h1>
         </div>
     );
 };

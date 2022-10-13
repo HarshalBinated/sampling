@@ -39,7 +39,7 @@ const Register = () => {
                             <div>
                                 <button type="button" class="btn btn-danger">Submit</button>
                             </div>
-                            <div style={{marginTop: "0.5rem"}}>
+                            <div className='mt-2'>
                                 Already have an account? <a href="/signin">Sign In</a> 
                             </div>
 

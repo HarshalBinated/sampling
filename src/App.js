@@ -26,7 +26,7 @@ const App = () => {
             <AiOutlineSearch />
             <input type="text" name="" placeholder='search..' />
           </div>
-          <a href="#" className="ml-5 mt-1 text-dark" ><MdNotificationsActive /></a>
+          <a href="#" className=" mt-1 text-dark" style={{marginLeft: "5rem"}} ><MdNotificationsActive /></a>
           <a href="#" className="mr-1 mt-1 text-dark"><IoIosContact /></a>
 
         </div>

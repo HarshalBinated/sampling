@@ -26,15 +26,22 @@ const App = () => {
             <AiOutlineSearch />
             <input type="text" name="" placeholder='search..' />
           </div>
-          <a href="#" className=" mt-1 text-dark" style={{marginLeft: "5rem"}} ><MdNotificationsActive /></a>
-          <a href="#" className="mr-1 mt-1 text-dark"><IoIosContact /></a>
-
+          <a href="#" className=" mt-1 text-dark" style={{marginLeft: "4rem"}} ><MdNotificationsActive /></a>
+          <div class="btn-group" style={{  cursor: "pointer"}}>
+            <div class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <IoIosContact />
+            </div>
+            <div class="dropdown-menu dropdown-menu-right">
+              <small class="dropdown-item" type="button">Profile</small>
+              <small class="dropdown-item" type="button">Setting</small>
+            </div>
+          </div>
         </div>
       </nav>
       <Sidebar>
         <Routes>
 
-          <Route path="/" element={<Register />} /> 
+          <Route path="/" element={<Register />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/stock" element={<Stock />} />
@@ -48,4 +55,3 @@ const App = () => {
 };
 
 export default App;
-                

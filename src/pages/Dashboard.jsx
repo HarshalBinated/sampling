@@ -62,10 +62,10 @@ const Dashboard = () => {
                                         </h4>
                                     </div>
                                     <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                        <div className="row ml-3 mt-1">
-                                            <p>Low Stock Item</p>
-                                            <p className='ml-4 text-danger'>9</p>
-                                        </div>
+                                        <h6 className="row ml-3 mt-1">
+                                            <small>Low Stock Item</small>
+                                            <small className='ml-4 text-danger'>9</small>
+                                        </h6>
                                     </div>
                                 </div>
                                 <div className="card mt-2">
@@ -77,10 +77,10 @@ const Dashboard = () => {
                                         </h4>
                                     </div>
                                     <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                        <div className="row ml-3 mt-1">
-                                            <p>All Item Group</p>
-                                            <p className="ml-4 text-danger">12</p>
-                                        </div>
+                                        <h6 className="row ml-3 mt-1">
+                                            <small>All Item Group</small>
+                                            <small className="ml-4 text-danger">12</small>
+                                        </h6>
                                     </div>
                                 </div>
                                 <div className="card mt-2">
@@ -92,10 +92,10 @@ const Dashboard = () => {
                                         </h4>
                                     </div>
                                     <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                        <div className="row ml-4 mt-1">
-                                            <p>All Items</p>
-                                            <p className='ml-4 text-danger'>26</p>
-                                        </div>
+                                        <h6 className="row ml-4 mt-1">
+                                            <small>All Items</small>
+                                            <small className='ml-4 text-danger'>26</small>
+                                        </h6>
                                     </div>
                                 </div>
                                 <div className="card mt-2">
@@ -107,10 +107,10 @@ const Dashboard = () => {
                                         </h4>
                                     </div>
                                     <div id="collapseFour" className="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                        <div className="row ml-3 mt-1">
-                                            <p>Unconfirmed Item</p>
-                                            <p className=' text-danger ml-3'>32</p>
-                                        </div>
+                                        <h6 className="row ml-3 mt-1">
+                                            <small>Unconfirmed Item</small>
+                                            <small className=' text-danger ml-3'>32</small>
+                                        </h6>
                                     </div>
                                 </div>
 
@@ -134,10 +134,10 @@ const Dashboard = () => {
                                     </div>
 
                                     <div id="collapseone" className="collapse" aria-labelledby="headingone" data-parent="#accordionExamples">
-                                        <div className="row ml-3 mt-1">
-                                            <p>Low Stock Item</p>
-                                            <p className='ml-4 text-danger'>9</p>
-                                        </div>
+                                        <h6 className="row ml-3 mt-1">
+                                            <small>Low Stock Item</small>
+                                            <small className='ml-4 text-danger'>9</small>
+                                        </h6>
                                     </div>
                                 </div>
                                 <div className="card mt-2">
@@ -149,10 +149,10 @@ const Dashboard = () => {
                                         </h4>
                                     </div>
                                     <div id="collapsetwo" className="collapse" aria-labelledby="headingtwo" data-parent="#accordionExample">
-                                        <div className="row mt-1 ml-3">
-                                            <p>All Item Groups</p>
-                                            <p className='ml-4 text-danger'>23</p>
-                                        </div>
+                                        <h6 className="row mt-1 ml-3">
+                                            <small>All Item Groups</small>
+                                            <small className='ml-4 text-danger'>23</small>
+                                        </h6>
                                     </div>
                                 </div>
                                 <div className="card mt-2">
@@ -165,8 +165,8 @@ const Dashboard = () => {
                                     </div>
                                     <div id="collapsethree" className="collapse" aria-labelledby="headingthree" data-parent="#accordionExample">
                                         <div className="row ml-3 mt-1">
-                                            <p>All Items</p>
-                                            <p className='text-danger ml-4 '>13</p>
+                                            <small>All Items</small>
+                                            <small className='text-danger ml-4 '>13</small>
                                         </div>
                                     </div>
                                 </div>
@@ -180,8 +180,8 @@ const Dashboard = () => {
                                     </div>
                                     <div id="collapsefour" className="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
                                         <div className="row mt-1 ml-3">
-                                            <p className=''>Unconfirmed Item</p>
-                                            <p className='text-danger ml-3'>17</p>
+                                            <small className=''>Unconfirmed Item</small>
+                                            <small className='text-danger ml-3'>17</small>
                                         </div>
                                     </div>
                                 </div>
@@ -196,7 +196,7 @@ const Dashboard = () => {
             <div class="card w-50 h-25" style={{ marginLeft: "11rem" }}>
                 <div className="card-body">
                     <h5 className='mb-3'>Top Using Item </h5>
-                        <div class="btn-group" style={{marginLeft: "28rem", cursor: "pointer", marginTop: "-5rem"}}>
+                        <div class="btn-group" style={{marginLeft: "27rem", cursor: "pointer", marginTop: "-5rem"}}>
                             <div class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <FaRegCalendarAlt/>
                             </div>
@@ -219,6 +219,7 @@ const Dashboard = () => {
                     <small className="card-text text-muted" style={{marginLeft: "7rem"}}>No item were invoiced in this time frame.</small>
                 </div>
             </div>
+           
         </>
     );
 };

@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import logo from '../images/logo.png';
 
 import {
-    FaTh,
+    
     FaBars,
     FaRegChartBar,
     FaRegFileWord,
     FaCreativeCommonsSamplingPlus,
-    FaShoppingBag,
-    FaThList
+   
 }from "react-icons/fa";
 import {AiFillEye, AiFillHome}from "react-icons/ai";
 import { NavLink } from 'react-router-dom';

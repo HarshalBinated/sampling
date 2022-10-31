@@ -11,8 +11,9 @@ import Register from './pages/Register';
 import Signin from './pages/Signin';
 import logo from './images/logo.png';
 import { IoIosContact } from "react-icons/io";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiFillSetting, AiOutlineLogout } from "react-icons/ai";
 import { MdNotificationsActive } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
 
 
 
@@ -26,19 +27,22 @@ const App = () => {
             <AiOutlineSearch />
             <input type="text" name="" placeholder='search..' />
           </div>
-          <a href="#" className=" mt-1 text-dark" style={{marginLeft: "4rem"}} ><MdNotificationsActive /></a>
           <div class="btn-group" style={{  cursor: "pointer"}}>
-            <div class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{marginLeft: "3rem"}}>
               <IoIosContact />
             </div>
             <div class="dropdown-menu dropdown-menu-right">
-              <small class="dropdown-item" type="button">Profile</small>
-              <small class="dropdown-item" type="button">Setting</small>
+              <p class="dropdown-item" type="button"><CgProfile/>  Profile</p>
+              <p class="dropdown-item" type="button"><AiFillSetting/>   Setting</p>
+              <p class="dropdown-item" type="button"><AiOutlineLogout/>   Logout</p>
+
             </div>
           </div>
+          <a href="#" className=" mt-1 text-dark mr-4" ><MdNotificationsActive /></a>
+
         </div>
       </nav>
-      <Sidebar>
+      <Sidebar> 
         <Routes>
 
           <Route path="/" element={<Register />} />

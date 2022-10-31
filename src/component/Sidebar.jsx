@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-
 import {
-    
     FaBars,
-    FaRegChartBar,
-    FaRegFileWord,
-    FaCreativeCommonsSamplingPlus,
-   
+    FaStackOverflow,
 }from "react-icons/fa";
-import {AiFillEye, AiFillHome}from "react-icons/ai";
+import {AiFillHome}from "react-icons/ai";
+import {MdOutlinePriceChange}from "react-icons/md";
+import {RiBarChartGroupedFill}from "react-icons/ri";
+import {TbReportSearch}from "react-icons/tb";
 import { NavLink } from 'react-router-dom';
 
 
@@ -24,22 +22,22 @@ const Sidebar = ({children}) => {
         {
             path:"/stock",
             name:"Stock",
-            icon:<FaRegChartBar/>
+            icon:<RiBarChartGroupedFill/>
         },
         {
             path:"/utilization",
             name:"Utilization",
-            icon:<FaCreativeCommonsSamplingPlus/>
+            icon:<FaStackOverflow/>
         },
         {
             path:"/estimation",
             name:"Estimation",
-            icon:<FaRegFileWord/>
+            icon:<MdOutlinePriceChange/>
         },
         {
             path:"/view",
             name:"View",
-            icon:<AiFillEye/>
+            icon:<TbReportSearch/>
         }
     ]
     return (

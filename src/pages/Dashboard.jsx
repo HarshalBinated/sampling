@@ -1,14 +1,63 @@
-import React from 'react';
 import { FaRegCalendarAlt, FaShippingFast } from "react-icons/fa";
 import { AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineFileSync } from "react-icons/ai";
 import { BsShieldLock } from "react-icons/bs";
+import { useState } from "react";
+var data = require("../MOCK_DATA.json");
 
 const Dashboard = () => {
+    const [value, setValue] = useState("");
+
+    const onChange = (event) => {
+        setValue(event.target.value);
+    };
+
+    const onSearch = (searchTerm) => {
+        setValue(searchTerm);
+        // our api to fetch the search result
+        console.log("search ", searchTerm);
+    };
     return (
         <>
+            <div className="App">
+
+
+                <div className="search-container">
+                    <div className="search-inner">
+                        <input type="text" placeholder="search..." value={value} onChange={onChange} />
+                        <button onClick={() => onSearch(value)}> Search </button>
+                    </div>
+                    <div className="dropdown">
+                        {data
+                            .filter((item) => {
+                                const searchTerm = value.toLowerCase();
+                                const fullName = item.full_name.toLowerCase();
+
+                                return (
+                                    searchTerm &&
+                                    fullName.startsWith(searchTerm) &&
+                                    fullName !== searchTerm
+                                );
+                            })
+                            .slice(0, 10)
+                            .map((item) => (
+                                <div
+                                    onClick={() => onSearch(item.full_name)}
+                                    className="dropdown-row"
+                                    key={item.full_name}
+                                >
+                                    {item.full_name}
+                                </div>
+                            ))}
+                    </div>
+                </div>
+            </div>
+            <br />
             <div className='container justify-content-center'>
+
                 <div className='row'>
+
                     <div className='col-md-3' >
+
                         <div className="card" id='card-content'>
                             <div className="card-body">
                                 <h1 className="card-title text-center mb-2 text-primary">40</h1>
@@ -31,7 +80,7 @@ const Dashboard = () => {
                             <div className="card-body">
                                 <h1 className="card-title text-center text-success">43</h1>
                                 <figcaption className="blockquote-footer text-center">Pkg</figcaption>
-                                <small className='text-center '><AiOutlineMinusCircle/> TO BE ORDER</small>
+                                <small className='text-center '><AiOutlineMinusCircle /> TO BE ORDER</small>
                             </div>
                         </div>
                     </div>
@@ -40,7 +89,7 @@ const Dashboard = () => {
                             <div className="card-body">
                                 <h1 className="card-title text-center text-info">25</h1>
                                 <figcaption className="blockquote-footer text-center">Qty</figcaption>
-                                <small className='text-center'><AiOutlineFileSync/> TO BE PACKED</small>
+                                <small className='text-center'><AiOutlineFileSync /> TO BE PACKED</small>
                             </div>
                         </div>
                     </div>
@@ -119,7 +168,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className='col-md-6 '>     
+                <div className='col-md-6 '>
                     <div className="card w-50" >
                         <div className="card-body">
                             <h5 className="card-title">Thread Details</h5>
@@ -190,36 +239,36 @@ const Dashboard = () => {
                     </div>
 
 
-            </div>
+                </div>
             </div>
             <br />
             <div class="card w-50 h-25" style={{ marginLeft: "11rem" }}>
                 <div className="card-body">
                     <h5 className='mb-3'>Top Using Item </h5>
-                        <div class="btn-group" style={{marginLeft: "27rem", cursor: "pointer", marginTop: "-5rem"}}>
-                            <div class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <FaRegCalendarAlt/>
-                            </div>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <small class="dropdown-item" type="button">Today</small>
-                                <small class="dropdown-item" type="button">Yesterday</small>
-                                <small class="dropdown-item" type="button">This Week</small>
-                                <small class="dropdown-item" type="button">This Month</small>
-                                <small class="dropdown-item" type="button">This Year</small>
-                                <small class="dropdown-item" type="button">Previous Week</small>
-                                <small class="dropdown-item" type="button">Previous Month</small>
-                                <small class="dropdown-item" type="button">Previous Year</small>
-                                <small class="dropdown-item" type="button">Custom</small>
-                            </div>
+                    <div class="btn-group" style={{ marginLeft: "27rem", cursor: "pointer", marginTop: "-5rem" }}>
+                        <div class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <FaRegCalendarAlt />
                         </div>
-                   
-                    <h6 className="border-top" style={{marginTop: "-2rem"}}></h6>
-                    <br/>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <small class="dropdown-item" type="button">Today</small>
+                            <small class="dropdown-item" type="button">Yesterday</small>
+                            <small class="dropdown-item" type="button">This Week</small>
+                            <small class="dropdown-item" type="button">This Month</small>
+                            <small class="dropdown-item" type="button">This Year</small>
+                            <small class="dropdown-item" type="button">Previous Week</small>
+                            <small class="dropdown-item" type="button">Previous Month</small>
+                            <small class="dropdown-item" type="button">Previous Year</small>
+                            <small class="dropdown-item" type="button">Custom</small>
+                        </div>
+                    </div>
+
+                    <h6 className="border-top" style={{ marginTop: "-2rem" }}></h6>
                     <br />
-                    <small className="card-text text-muted" style={{marginLeft: "7rem"}}>No item were invoiced in this time frame.</small>
+                    <br />
+                    <small className="card-text text-muted" style={{ marginLeft: "7rem" }}>No item were invoiced in this time frame.</small>
                 </div>
             </div>
-           
+
         </>
     );
 };
